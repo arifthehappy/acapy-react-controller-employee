@@ -143,8 +143,8 @@ export const DelegationForm = ({ connections }: DelegationFormProps) => {
             >
               <option value="">Select a credential...</option>
               {eligibleCredentials.map((cred: any) => (
-                <option key={cred.id} value={cred.id}>
-                  {cred.attributes.name || cred.id}
+                <option key={cred?.referent} value={cred?.referent}>
+                  {cred?.attrs?.name || cred?.referent}
                 </option>
               ))}
             </select>
