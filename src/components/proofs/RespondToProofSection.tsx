@@ -242,7 +242,8 @@ export const RespondToProofSection = ({
                             <option value="">Select credential...</option>
                             {matchingCredentials.map((cred: any) => (
                               <option key={cred.referent} value={cred.referent}>
-                                {cred.attrs[attr.name]} ({cred.referent})
+                                {cred.attrs[attr.name]} -{" "}
+                                {cred.attrs.credential_type}({cred.referent})
                               </option>
                             ))}
                           </select>
